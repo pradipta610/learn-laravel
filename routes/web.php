@@ -54,6 +54,7 @@ Route::post('/logout',[LoginController::class,'logout']);
 Route::get('/register',[RegisterController::class,'index'])->middleware('guest');
 Route::post('/register',[RegisterController::class,'store']);
 Route::get('/dashboard',[DashboardsController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class , 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts',DashboardPostController::class)->middleware('auth');
 // Route::get('categories/{category:slug}',function(Category $category ){
 //         return view('posts',[
