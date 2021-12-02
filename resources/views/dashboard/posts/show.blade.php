@@ -13,7 +13,7 @@
             <article class="my-4 fs-5">
             {!! $post->body !!}
             </article>
-            <a href="/posts" class="text-decoration-none btn btn-primary my-4">Back to Posts</a>
+            <a href="/dashboard/posts" class="text-decoration-none btn btn-primary my-4">Back to Posts</a>
         </div>
     </div>
 </div>
