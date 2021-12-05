@@ -18,22 +18,25 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         
-        // User::create([
-        //     'name'=> 'Pradipta Wistika',
-        //     'email'=>'ketut@yahoo.com',
-        //     'password'=> bcrypt('12345')
-        // ]);
-        // User::create([
-        //     'name'=> 'Nanda Wistika',
-        //     'email'=>'santoso@yahoo.com',
-        //     'password'=> bcrypt('122345')
-        // ]);
-        // User::create([
-        //     'name'=> 'Natalia Wistika',
-        //     'email'=>'Nata@yahoo.com',
-        //     'password'=> bcrypt('123425')
-        // ]);
-        User::factory(10)->create();
+        User::create([
+            'name'=> 'Pradipta Wistika',
+            'username' => 'pradipta',
+            'email'=>'ketut@yahoo.com',
+            'password'=> bcrypt('password')
+        ]);
+        User::create([
+            'name'=> 'Nanda Wistika',
+            'username' => 'nanda',
+            'email'=>'santoso@yahoo.com',
+            'password'=> bcrypt('password')
+        ]);
+        User::create([
+            'name'=> 'Natalia Wistika',
+            'username' => 'natalia',
+            'email'=>'Nata@yahoo.com',
+            'password'=> bcrypt('password')
+        ]);
+        User::factory(3)->create();
         Category::create([
             'name'=>'Samsung',
             'slug'=>'samsung'
