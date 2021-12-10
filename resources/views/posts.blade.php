@@ -1,4 +1,5 @@
 @extends('layout.main')
+@extends('layout.navbar')
 @section('container')
     <h1 class="mb-3 text-center">{{ $title }}</h1><br>
 

@@ -1,4 +1,5 @@
 @extends('layout.main')
+@extends('layout.navbar')
 @section('container')
 <h5 class="mb-5 fs-2">All Category</h5>
 

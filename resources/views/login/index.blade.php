@@ -1,5 +1,5 @@
 @extends('layout.main')
-
+@extends('layout.navbar')
 @section('container')
     <div class="container-fluid ps-md-0">
   <div class="row g-0">
