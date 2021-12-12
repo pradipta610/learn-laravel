@@ -1,10 +1,79 @@
 
+/* google font */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-*{
-  font-family: 'Poppins', sans-serif;
+
+/* variabel css */
+:root{
+  --header-height:3rem;
+
+  /* color/warna */
+
+  --hue-color:197;
+
+  /* hsl color */
+  --first-color:hsl(var(--hue-color),84%,22%);
+  --first-color-second:hsl(var(--hue-color),73%,53%);
+  --first-color-alt:hsl(var(--hue-color),57%,53%);
+  --first-color-lighter:hsl(var(--hue-color),92%,85%);
+  --title-color :hsl(var(--hue-color),8%,15%);
+  --text-color: hsl(var(--hue-color),8%,45%);
+  --text-color-light:hsl(var(--hue-color),8%,65%);
+  --input-color:hsl(var(--hue-color),70%,96%);
+  --body-color:hsl(var(--hue-color),60%,99%);
+  --container-color:#fff;
+
+
+  /*  font */
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size:2rem;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1.125rem;
+    --normal-font-size:.938rem;
+    --small-font-size:.813rem;
+    --smaller-font-size:.75rem;
+
+
+    /* font weight */
+    --font-medium : 500;
+    --font-semi-bold: 600;
+
+    /* margin */
+    --mb-0-25:.25rem;
+    --mb-0-5:.5rem;
+    --mb-0-75:.75rem;
+    --mb-1:1rem;
+    --mb-1-5:1.5rem;
+    --mb-2:2rem;
+    --mb-2-5:2.5rem;
+    --mb-3:3rem;
+    /* z-index */
+    --z-tooltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+}
+
+/* untuk device yang besar */
+@media screen and (min-width:986px){
+  :root{
+    --big-font-size:3rem;
+    --h1-font-size:2.25rem;
+    --h2-font-size:1.5rem;
+    --h3-font-size:1.12rem;
+    --normal-font-size:1rem;
+    --small-font-size:.875rem;
+    --smaller-font-size:.813rem;
+  }
+}
+
+body{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color:var(--body-color) ;
+  color: var(--text-color);
 }
 .login {
     min-height: 100vh;

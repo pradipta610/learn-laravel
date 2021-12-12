@@ -2,8 +2,8 @@
 @extends('layout.transparentnavbar')
 @section('container')
   <section>
-      <h2 id="text" ><span class="text1"> Welcome To My</span><br><span class="text2">BLOG</span> </h2>
       <img src="img/gedung.png" alt="" id="gedung">
+      <h2 id="text" ><span class="text1"> Welcome To My</span><br><span class="text2">BLOG</span> </h2>
       <img src="img/matahari.png" alt="" id="sun">
       <img src="img/pesawat.png" alt="" id="plane">
       <img src="img/saya.png" alt="" id="me">
