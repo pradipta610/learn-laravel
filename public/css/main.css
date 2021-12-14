@@ -56,21 +56,9 @@
     --z-modal:1000;
 }
 
-/* untuk device yang besar */
-@media screen and (min-width:986px){
-  :root{
-    --big-font-size:3rem;
-    --h1-font-size:2.25rem;
-    --h2-font-size:1.5rem;
-    --h3-font-size:1.12rem;
-    --normal-font-size:1rem;
-    --small-font-size:.875rem;
-    --smaller-font-size:.813rem;
-  }
-}
+
 
 body{
-  overflow-x: hidden;
   font-family: var(--body-font) !important;
   font-size: var(--normal-font-size) !important;
   background-color:var(--body-color)!important ;
@@ -95,6 +83,20 @@ h1,h2,h3,h4{
 .section-title,.section-subtitle{
   text-align: center !important;
 }
+/* layout */
+.container{
+  max-width: 768px;
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+
+
+
 .login {
     min-height: 100vh;
   }
@@ -160,7 +162,7 @@ section #text .text1{
 section #text .text2{
   font-family: 'Permanent Marker', cursive;
 }
-section img{
+section.home img{
   position: absolute;
   top: 0;
   left: 0;
@@ -178,13 +180,155 @@ section img{
   background: #ffff;
 }
 
-.sec h2{
-  font-size: 3.5em;
-  color: #fff;
-  margin-bottom: 10px;
-}
-.sec p{
-  font-size: 1em;
-  color: #fff;
+/* about section */
+.about-img{
+  width: 200px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
 }
 
+.about-title{
+  font-size: var(--h2-font-size) !important;
+}
+.about-subtitle{
+  font-size: var(--h3-font-size) !important;
+  font-weight: var(--font-medium) !important;
+  margin-bottom: var(--mb-0-75) !important;
+}
+.about-title,.about-subtitle{
+  text-align: center;
+}
+
+.about-description{
+  text-align: justify;
+  margin-bottom:var(--mb-2-5);
+}
+.about-info{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-0-25);
+}
+.logos{
+  font-size: var(--big-font-size);
+  color: var(--bs-gray-900);
+  transition: .5s;
+}
+.logos:hover{
+  color:var(--bs-gray-600);
+}
+.icon-text{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+}
+.icon-text,.logos{
+  display: block;
+  text-align: center;
+}
+
+
+
+/* skills */
+.skill-container{
+  row-gap: 0;
+}
+.skill-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+.skills-icon,.skills-arrow{
+  font-size: 2rem;
+  color:var(--bs-gray-900) ;
+}
+.skills-icon{
+  margin-right: var(--mb-0-75);
+}
+.skills-title{
+  font-size: var(--h3-font-size);
+}
+.skills-subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+.skills-arrow{
+  margin-left: auto;
+  transition: .4s;
+}
+.skills-title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+.skills-list{
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+}
+.skills-name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+.skills-bar,.skill-percentage{
+  height: 5px;
+  border-radius: .25rem;
+}
+.skills-bar{
+  background-color: var(--first-color-lighter);
+}
+.skill-percentage{
+  display: block;
+  background-color: var(--first-color);
+}
+
+.skill-html{
+  width: 90%;
+}
+.skill-css{
+  width: 80%;
+}
+.skill-js{
+  width: 70%;
+}
+.skill-php{
+  width: 80%;
+}
+.skill-laravel{
+  width: 70%;
+}
+.skill-photoshop{
+  width: 60%;
+}
+.skill-lightroom{
+  width: 60%;
+}
+.skill-premiere{
+  width: 70%;
+}
+
+
+.skills-close .skills-list{
+  height: 0;
+  overflow: hidden;
+}
+
+.skills-open .skills-list{
+  height: max-content;
+  margin-bottom:var(--mb-2-5);
+}
+
+.skills-open .skills-arrow{
+  transform: rotate(-180deg);
+}
+/* untuk device yang besar */
+@media screen and (min-width:986px){
+  :root{
+    --big-font-size:3rem;
+    --h1-font-size:2.25rem;
+    --h2-font-size:1.5rem;
+    --h3-font-size:1.12rem;
+    --normal-font-size:1rem;
+    --small-font-size:.875rem;
+    --smaller-font-size:.813rem;
+  }
+}
