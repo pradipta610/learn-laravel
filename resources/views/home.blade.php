@@ -3,9 +3,10 @@
 @section('container')
 {{-- home --}}
   <section class="home">
-      <img src="img/gedung.png" alt="" id="gedung">
-      <h2 id="text" ><span class="text1"> Welcome To My</span><br><span class="text2">BLOG</span> </h2>
       <img src="img/matahari.png" alt="" id="sun">
+      <h2 id="text" ><span class="text1"> Welcome To My BLOG</span> </h2>
+      <img src="img/pegunungan.png" alt="" id="pegunungan">
+      <img src="img/gedung.png" alt="" id="gedung">
       <img src="img/pesawat.png" alt="" id="plane">
       <img src="img/saya.png" alt="" id="me">
 
@@ -37,6 +38,14 @@
                         <a href="" target="_blank" class="logos"><i class="uil uil-instagram"></i></a>
                         <span class="icon-text">Instagram</span>
                     </div>
+                </div>
+                <div class="about-info">
+                    <a href="#contact" class="button">
+                        Contact Me <i class="uil uil-message button__icon"></i>
+                    </a>
+                    <a href="#contact" class="button">
+                        Download Cv <i class="uil uil-message button__icon"></i>
+                    </a>
                 </div>
           </div>
       </div>
@@ -187,6 +196,90 @@
         </div>
     </div>
   </section>
+
+
+  {{-- pendidikan --}}
+  <section class="qualification section">
+    <div class="sec">
+      <h2 class="section-title">Pendidikan</h2>
+      <span class="section-subtitle">Pendidikan Yang Saya Tempuh</span>
+      <div class="qualification-container container">
+          <div class="qualification-section">
+              {{-- qualification content --}}
+              <div class="qualification-content">
+                  {{-- qualification 1 --}}
+                  <div class="qualification-data">
+                      <div>
+                        <h3 class="qualification-title">Sekolah Dasar</h3>
+                        <span class="qualification-subtitle">SDN 4 BALER BALE AGUNG</span>
+                        <div class="qualification-calendar">
+                            <i class="uil uil-calendar-alt"></i>
+                            2007-2013
+                        </div>
+                      </div>
+
+                      <div>
+                          <span class="qualification-rounder"></span>
+                          <span class="qualification-line"></span>
+                      </div>
+                  </div>
+
+                  {{-- qualification 2 --}}
+                  <div class="qualification-data">
+                      <div></div>
+                      <div>
+                        <span class="qualification-rounder"></span>
+                        <span class="qualification-line"></span>
+                    </div>
+                      <div>
+                        <h3 class="qualification-title">Sekolah Menengah Pertama</h3>
+                        <span class="qualification-subtitle">SMPN 1 NEGARA</span>
+                        <div class="qualification-calendar">
+                            <i class="uil uil-calendar-alt"></i>
+                            2013-2016
+                        </div>
+                      </div>
+                  </div>
+
+
+                  {{-- qualification 3 --}}
+                  <div class="qualification-data">
+                      <div>
+                        <h3 class="qualification-title">Sekolah Menengah Atas</h3>
+                        <span class="qualification-subtitle">SMAN 1 NEGARA</span>
+                        <div class="qualification-calendar">
+                            <i class="uil uil-calendar-alt"></i>
+                            2016-2019
+                        </div>
+                      </div>
+
+                      <div>
+                          <span class="qualification-rounder"></span>
+                          <span class="qualification-line"></span>
+                      </div>
+                  </div>
+
+                  {{-- qualification 4 --}}
+                  <div class="qualification-data">
+                    <div></div>
+                    <div>
+                        <span class="qualification-rounder"></span>
+                        {{-- <span class="qualification-line"></span> --}}
+                    </div>
+                      <div>
+                        <h3 class="qualification-title">Perguruan Tinggi</h3>
+                        <span class="qualification-subtitle">ITB STIKOM BALI</span>
+                        <div class="qualification-calendar">
+                            <i class="uil uil-calendar-alt"></i>
+                            2019-2022
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 
@@ -211,9 +304,9 @@
       let me = document.getElementById('me');
       window.addEventListener('scroll',function(){
           let value = window.scrollY;
-          text.style.top = 10 + value * -0,9 + '%';
+          text.style.top = 10 + value * -0.1 + '%';
           gedung.style.top = value * 0.5 + 'px';
-          sun.style.top = value * 0.1 + 'px';
+          sun.style.top = value * 0.9 + 'px';
           plane.style.top = -value * 0.2 + 'px';
           me.style.top = value * 0.2 + 'px';
       })

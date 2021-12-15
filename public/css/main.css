@@ -208,6 +208,7 @@ section.home img{
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-0-25);
+  margin-bottom: var(--mb-2-5);
 }
 .logos{
   font-size: var(--big-font-size);
@@ -225,6 +226,27 @@ section.home img{
   display: block;
   text-align: center;
 }
+.button{
+  display: inline-block;
+  background-color: #2e77ff;
+  color: #fff;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  text-decoration: none !important;
+  transition: .3s;
+}
+
+.button:hover{
+  background-color: #0f61fa;
+  color: #ffffff;
+}
+.button__icon{
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+}
+
+
 
 
 
@@ -319,6 +341,43 @@ section.home img{
 
 .skills-open .skills-arrow{
   transform: rotate(-180deg);
+}
+
+
+
+/* qualification */
+.qualification-data{
+display: grid;
+grid-template-columns: 1fr max-content 1fr;
+column-gap: 1.5rem;
+}
+
+.qualification-title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+.qualification-subtitle{
+  font-size: var(--small-font-size);
+  display: inline-block;
+  margin-bottom: var(--mb-1);
+}
+.qualification-calendar{
+  font-size: var(--smaller-font-size);
+  color: #8596b8;
+}
+.qualification-rounder{
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #528af3;
+}
+.qualification-line{
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #3a4c6e;
+  transform: translate(6px,-7px);
 }
 /* untuk device yang besar */
 @media screen and (min-width:986px){
