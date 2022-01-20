@@ -13,7 +13,7 @@
             <a class="nav-link {{ Request::is('about') ? 'active':' ' }}" href="/about">About</a>
           </li> --}}
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('posts') ? 'active':' ' }}" href="/posts">Blog Posts</a>
+            <a class="nav-link {{ Request::is('posts') ? 'active':' ' }}" href="/posts">Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ Request::is('categories') ? 'active':' ' }}" href="/categories">Blog Categories</a>
@@ -41,7 +41,11 @@
             <a class="nav-link {{ ($active == "login") ? 'active' : '' }}" href="/login">Login <i class="bi bi-box-arrow-in-right"></i></a>
           </li>
           @endauth
+
         </ul>
+        
       </div>
     </div>
     </nav>
+
+

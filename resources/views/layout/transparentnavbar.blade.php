@@ -1,4 +1,4 @@
-<nav class="navbar  navbar-expand-lg navbar-light padding">
+<nav class="navbar  navbar-expand-lg navbar-light bg-light  padding" id="navbar">
     <div class="container">
       <a class="navbar-brand" href="/posts">PRADIPTA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,7 @@
             <a class="nav-link {{ Request::is('about') ? 'active':' ' }}" href="/about">About</a>
           </li> --}}
           <li class="nav-item">
-            <a class="nav-link {{ Request::is('posts') ? 'active':' ' }}" href="/posts">Blog Posts</a>
+            <a class="nav-link {{ Request::is('posts') ? 'active':' ' }}" href="/posts">Blog </a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ Request::is('categories') ? 'active':' ' }}" href="/categories">Blog Categories</a>
@@ -41,6 +41,10 @@
             <a class="nav-link {{ ($active == "login") ? 'active' : '' }}" href="/login">Login <i class="bi bi-box-arrow-in-right"></i></a>
           </li>
           @endauth
+
+          <li class="nav-item">
+            <i class="uil uil-moon change-theme nav-link" id="theme-button"></i> 
+          </li>
         </ul>
       </div>
     </div>
