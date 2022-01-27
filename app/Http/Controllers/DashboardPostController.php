@@ -96,7 +96,7 @@ class DashboardPostController extends Controller
             'categories'=>Category::all()
         ]);
     }
-
+ 
     /**
      * Update the specified resource in storage.
      *
@@ -151,7 +151,7 @@ class DashboardPostController extends Controller
 
     //untuk slug auto
     public function checkSlug(Request $request){
-        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        $slug = SlugService::createSlug(Post::class, 'slugCategories', $request->title);
         return response()->json(['slug'=>$slug]);    
     }
 }

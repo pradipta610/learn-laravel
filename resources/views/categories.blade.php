@@ -10,7 +10,12 @@
         <div class="col-md-4">
             <a href="/posts?category={{ $category->slug }}">
             <div class="card bg-dark text-white ">
+                @if ($category->image)
+                <img src="/storage/{{ $category->image }}" alt="{{ $category->name }}" class="img-fluid">
+                @else
                 <img src="https://source.unsplash.com/500x500/?{{ $category->name }}" class="card-img rounded " alt="{{ $category->name }}">
+                @endif
+                
                 <div class="card-img-overlay d-flex align-items-center p-0">
                   <h5 class="card-title flex-fill p-3 fs-4" style="background-color: rgba(0,0,0,0.7)">{{ $category->name }}</h5>
                 </div>
@@ -18,7 +23,6 @@
             </a>
         </div>
         @endforeach
-    </div>
+    </div> 
 </div>  
 @endsection
- 

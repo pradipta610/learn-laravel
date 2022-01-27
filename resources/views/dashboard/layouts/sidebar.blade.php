@@ -7,14 +7,25 @@
             Dashboard
           </a>
         </li>
+       
+        @can('admin')
+      </ul>
+      <h6 class="sidebar-heading d-flex text-muted justify-content-between align-item-center px-3 mt-4 mb-1">Admin Area</h6>
+      <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link {{ Request::is('dashboard/posts*')?'active': ' ' }}" href="/dashboard/posts">
             <span data-feather="file-text"></span>
             My Posts
           </a>
         </li>
-      </ul>
 
-   
+        <li class="nav-item">
+          <a class="nav-link {{ Request::is('dashboard/categories*')?'active': ' ' }}" href="/dashboard/categories">
+            <span data-feather="file-text"></span>
+            Categories
+          </a>
+        </li>
+      </ul>
+      @endcan
     </div>
   </nav>

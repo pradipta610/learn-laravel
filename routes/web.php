@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardsController;
 use App\Http\Controllers\PostController;
@@ -55,7 +56,9 @@ Route::get('/register',[RegisterController::class,'index'])->middleware('guest')
 Route::post('/register',[RegisterController::class,'store']);
 Route::get('/dashboard',[DashboardsController::class, 'index'])->middleware('auth');
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class , 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/posts',DashboardPostController::class)->middleware('auth');
+Route::resource('/dashboard/posts',DashboardPostController::class)->middleware('admin');
+Route::resource('/dashboard/categories',AdminCategoryController::class)->except('show')->middleware('admin');
+Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class , 'checkSlug'])->middleware('auth');
 // Route::get('categories/{category:slug}',function(Category $category ){
 //         return view('posts',[
 //             'title'=>"$category->name`s Category",
