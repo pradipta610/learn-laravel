@@ -300,22 +300,22 @@
                 <div class="contact-inputs grid">
                     <div class="contact-content">
                         <label for="" class="contact-label">Name</label>
-                        <input type="text" class="contact-input">
+                        <input type="text"  id="name" class="contact-input">
                     </div>
                     <div class="contact-content">
                         <label for="" class="contact-label">Email</label>
-                        <input type="email" class="contact-input">
+                        <input type="email" id="email"  class="contact-input">
                     </div>
                     <div class="contact-content">
-                        <label for="" class="contact-label">Project</label>
-                        <input type="text" class="contact-input">
+                        <label for="" class="contact-label">Phone</label>
+                        <input type="text"  id="phone" class="contact-input">
                     </div>
                     <div class="contact-content">
                         <label for="" class="contact-label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact-input"></textarea>
+                        <textarea name="" id="message" cols="0" rows="7" class="contact-input"></textarea>
                     </div>
                     <div class="about-info">
-                        <a href="#" class="button button-flex">
+                        <a href="#" class="button button-flex" onclick="gotowhatsapp()">
                             Send Message
                             <i class="uil uil-message"></i>
                         </a>
@@ -508,6 +508,28 @@ themeButton.addEventListener('click', () => {
     getCurrentTheme()==="dark"? sun.src="img/bulan.png" : sun.src="img/matahari.png"
    
 })
+
+
+
+
+
+
+
+//form-button
+function gotowhatsapp(){
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var url = "https://wa.me/+6287761789873?text=" 
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    + "Email: " + email  + "%0a"
+    + "Message: " + message; 
+
+    window.open(url, '_blank').focus();
+}
 
   </script>
 @endsection

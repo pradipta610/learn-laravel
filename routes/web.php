@@ -26,20 +26,10 @@ Route::get('/', function () {
         "active"=>"home",
     ]);
 });
-// Route::get('/about', function () {
-//     return view('about',[
-//         "title" => "About",
-//         "active"=>"about",
-//         "name" => "Pradipta Wistika",
-//         "email" => "pradipta@gmail.com",
-//         "img" => "iu.jpg"
-
-//     ]);
-// });
 
 
 
-Route::get('/posts', [PostController::class,'index']);
+Route::get('/posts', [PostController::class,'index'])->middleware('auth');
 Route::get('posts/{post:slug}', [PostController::class,'ShowdetailPost']);
 Route::get('categories/',function(){
     return view('categories',[
@@ -47,31 +37,14 @@ Route::get('categories/',function(){
         "active"=>"categories",
         'categories'=>Category::all()
     ]);
-});
-
+})->middleware('auth');
 Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 Route::get('/register',[RegisterController::class,'index'])->middleware('guest');
 Route::post('/register',[RegisterController::class,'store']);
-Route::get('/dashboard',[DashboardsController::class, 'index'])->middleware('auth');
-Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class , 'checkSlug'])->middleware('auth');
+Route::get('/dashboard',[DashboardsController::class, 'index'])->middleware('admin');
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class , 'checkSlug'])->middleware('admin');
 Route::resource('/dashboard/posts',DashboardPostController::class)->middleware('admin');
 Route::resource('/dashboard/categories',AdminCategoryController::class)->except('show')->middleware('admin');
-Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class , 'checkSlug'])->middleware('auth');
-// Route::get('categories/{category:slug}',function(Category $category ){
-//         return view('posts',[
-//             'title'=>"$category->name`s Category",
-//             "active"=>"categories",
-//             'posts'=>$category->posts->load('author','category'),
-//         ]);
-// });
-
-// Route::get('/authors/{user:username}',function(User $user){
-//     return view('posts',[
-//         'title'=>"$user->name`s Posts",
-//         "active"=>"posts",
-//         'posts'=>$user->post->load('author','category'),
-//     ]);
-
-// });
+Route::get('/dashboard/categories/checkSlug', [AdminCategoryController::class , 'checkSlug'])->middleware('admin');
