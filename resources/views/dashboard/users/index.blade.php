@@ -34,13 +34,13 @@
         <td>{{ $user->email }}</td>
         <td>{{($user->is_admin) ?  "Admin" :  "Guest"  }}</td>
         <td>
-            <a href="/dashboard/users/{{ $user->slug }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+            <a href="/dashboard/users/{{ $user->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
             {{-- delete --}}
             
-            <form action="/dashboard/users/{{ $user->slug }}" class="d-inline" method="post">
+            <form action="/dashboard/users/{{ $user->id }}" class="d-inline" method="post">
               @method('delete')
               @csrf
-              <button class="badge bg-danger border-0 "    onclick="return confirm('yakin mau menghapus post dengan id `{{ $user->id }}` judul `{{ $user->title }}`')" ><span data-feather="x-circle"> </span></button>
+              <button class="badge bg-danger border-0 "    onclick="return confirm('yakin mau menghapus post dengan id `{{ $user->id }}` judul `{{ $user->name }}`')" ><span data-feather="x-circle"> </span></button>
             </form>
         </td>
       </tr>
